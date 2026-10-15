@@ -14,9 +14,16 @@ const tierColors = {
   3: "#dc2626", // Tier 3 - Red
 };
 
+const tierDefinitions = {
+  0: "No selected constraints detected",
+  1: "Article 4 only",
+  2: "One additional non-Article 4 constraint",
+  3: "Two or more non-Article 4 constraints"
+}
+
+
 function App() {
   const totalSites = brownfieldSites.length;
-
   const tierCounts = brownfieldSites.reduce(
     (acc, site) => {
       acc[site.friction_tier] += 1;
@@ -57,6 +64,25 @@ function App() {
       </section>
 
       <main className="map-wrapper">
+        <section className="tier-legend">
+          <h2>Friction tiers</h2>
+          <ul>
+            {Object.entries(tierDefinitions).map(([tier, description]) => (
+              <li key={tier}>
+                <span
+                  className="tier-indicator"
+                  style={{ backgroundColor: tierColors[tier] }}
+                  aria-hidden="true"
+                />
+                <strong>Tier {tier}</strong>
+                <span className="tier-description">
+                  {description}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <MapContainer
           center={[51.56, -0.28]}
           zoom={12}
