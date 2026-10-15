@@ -81,6 +81,8 @@ function App() {
               </li>
             ))}
           </ul>
+          <p className="tier-note">
+          Screening based on selected constraints. This is not planning due diligence. </p>
         </section>
 
         <MapContainer

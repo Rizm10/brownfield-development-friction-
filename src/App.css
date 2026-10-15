@@ -51,6 +51,14 @@
   box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
 }
 
+.tier-note {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
 .metric-card span {
   display: block;
   color: #6b7280;
