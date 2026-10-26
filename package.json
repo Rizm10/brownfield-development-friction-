@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:data": "node scripts/validate-data.mjs",
+    "check": "npm run lint && npm run validate:data && npm run build"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
