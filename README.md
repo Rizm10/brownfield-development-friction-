@@ -2,6 +2,8 @@
 
 An interactive opportunity-screening dashboard for brownfield land in the London Borough of Brent. It combines the national brownfield register with six planning and environmental datasets to show which active sites appear comparatively less constrained.
 
+**[View the live dashboard](https://brownfield-development-friction.vercel.app/)**
+
 **This is an opportunity-screening tool, not planning due diligence.**
 
 ## What the project does
